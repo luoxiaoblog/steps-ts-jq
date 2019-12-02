@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>创建标签</title>
+    </head>
+    <body>
+        <x-product>测试</x-product>
+        <script type="text/javascript">
+            var _xproproto=Object.create(HTMLElement.prototype)
+            _xproproto.createdCallback=function(){
+                this.addEventListener('click',function(){
+                    alert(1)
+                })
+            }
+            document.registerElement('x-product',{  //注册标签，通过原型链继承方法和属性
+                prototype:_xproproto
+            })</script>
+    </body>
+</html>
