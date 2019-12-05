@@ -386,13 +386,97 @@
       </div>
     </div>
   </div>
+<div style="height: 500px;">
+    <div class="lyj-steps lyj-steps--vertical">
+        <div class="lyj-step is-vertical" style="flex-basis: 50%;">
+          <div class="lyj-step__head is-finish">
+            <div class="lyj-step__line" style="margin-right: 0px;">
+              <i class="lyj-step__line-inner" style="transition-delay: 0ms; border-width: 0px; height: 0%;">
+              </i>
+            </div>
+            <div class="lyj-step__icon is-text"><!---->
+                <div class="lyj-step__icon-inner">1</div>
+              </div>
+            </div>
+            <div class="lyj-step__main">
+              <div class="lyj-step__title is-finish">步骤 1</div>
+              <div class="lyj-step__description is-finish"></div>
+            </div>
+          </div> 
+          <div class="lyj-step is-vertical" style="flex-basis: 50%;">
+            <div class="lyj-step__head is-process">
+              <div class="lyj-step__line" style="margin-right: 0px;">
+                <i class="lyj-step__line-inner" style="transition-delay: -150ms; border-width: 0px; height: 0%;"></i>
+              </div>
+              <div class="lyj-step__icon is-text"><!---->
+                <div class="lyj-step__icon-inner">2</div>
+              </div>
+            </div>
+            <div class="lyj-step__main">
+              <div class="lyj-step__title is-process">步骤 2</div>
+              <div class="lyj-step__description is-process"></div>
+            </div>
+          </div> 
+          <div class="lyj-step is-vertical is-flex" style="flex-basis: 50%;">
+            <div class="lyj-step__head is-wait">
+              <div class="lyj-step__line">
+                <i class="lyj-step__line-inner"></i>
+              </div>
+              <div class="lyj-step__icon is-text"><!---->
+                <div class="lyj-step__icon-inner">3</div>
+              </div>
+            </div>
+            <div class="lyj-step__main">
+              <div class="lyj-step__title is-wait">步骤 3</div>
+              <div class="lyj-step__description is-wait">这是一段很长很长很长的描述性文字</div>
+            </div>
+          </div>
+        </div>
+</div>
+
 
   <div id="steps"></div>
+  <div id="steps2"></div>
+  <div id="steps3"></div>
   <script type="text/javascript" src="https://front.leyoujia.com/js/jquery.js"></script>
   <script src="steps.js"></script>
   <script>
     $('#steps').lyj_steps({
       active: 1,
+      stepList: [{
+        title: '步骤一',
+        description: '这是一段很长很长很长的描述性文字'
+      }, {
+        title: '步骤二',
+        description: '这是一段很长很长很长的描述性文字'
+      }, {
+        title: '步骤三',
+        description: '这是一段很长很长很长的描述性文字'
+      }]
+    })
+
+    $('#steps2').lyj_steps({
+      active: 1,
+      space: 200,
+      finishStatus: 'success',
+      stepList: [{
+        title: '步骤一',
+        description: '这是一段很长很长很长的描述性文字'
+      }, {
+        title: '步骤二',
+        description: '这是一段很长很长很长的描述性文字'
+      }, {
+        title: '步骤三',
+        description: '这是一段很长很长很长的描述性文字'
+      }]
+    })
+
+    $('#steps3').lyj_steps({
+      active: 1,
+      direction: 'vertical',
+      alignCenter: false,
+      space: 100,
+      finishStatus: 'success',
       stepList: [{
         title: '步骤一',
         description: '这是一段很长很长很长的描述性文字'
